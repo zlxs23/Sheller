@@ -3,6 +3,7 @@
 #shell 运算符
 
 # 算术运算符
+echo "--expr--"
 var=`expr 3 + 3`
 echo "Total Value is $var"
 
@@ -36,6 +37,7 @@ if [ $a != $b ]; then
 fi
 
 # 关系运算符
+echo "--relation--"
 a=10
 b=20
 
@@ -82,6 +84,7 @@ else
 fi
 
 # 布尔运算符
+echo "--boolean--"
 a=10
 b=20
 
@@ -90,24 +93,58 @@ if [[ $a != $b ]]; then
 	echo "$a != $b : a != b"
 fi
 
-if [[ $a -lt 100 -a $b -gt 10 ]]; then
-	#statements
-	echo "$a 100 and $b 10"
-else
-	echo "X"
-fi
+# if [[ $a -lt 100 -a $b -gt 10 ]]; then
+# 	#statements
+# 	echo "$a 100 and $b 10"
+# else
+# 	echo "X"
+# fi
 
-if [[ $a -lt 100 -o $b -gt 100 ]]; then
-	#statements
-	echo "$a 100 or $b 100"
-else
-	echo "X"
-fi
+# if [[ $a -lt 100 -o $b -gt 100 ]]; then
+# 	#statements
+# 	echo "$a 100 or $b 100"
+# else
+# 	echo "X"
+# fi
 
-if [[ $a -lt 5 -o $b -gt 100 ]]; then
-	#statements
-	echo "$a 5 or $b 100"
-else
-	echo "X"
-fi
+# if [[ $a -lt 5 -o $b -gt 100 ]]; then
+# 	#statements
+# 	echo "$a 5 or $b 100"
+# else
+# 	echo "X"
+# fi
+
 # http://c.biancheng.net/cpp/view/2736.html
+# 以上根本不能运行??????
+
+# 字符串运算符
+echo "--string--"
+a="abc"
+b="egf"
+
+if [[ $a = $b ]]; then
+	#statements
+	echo "a = b"
+else
+	echo "a != b"
+fi
+
+if [[ $a != $b ]]; then
+	#statements
+	echo "a != b"
+fi
+
+if [[ -z $a ]]; then
+	#statements
+	echo "-z $a length == zero"
+fi
+
+if [[ -n $a ]]; then
+	#statements
+	echo "-n $a length !- zero"
+fi
+
+if [[ $a ]]; then
+	#statements
+	echo "$a is empty"
+fi
